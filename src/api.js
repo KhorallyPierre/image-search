@@ -2,6 +2,7 @@
 import axios from 'axios';
 
 // async keyword is just a requirement to use await
+// term is the piece of data from the user
 const searchImages = async(term) => {
     // the await keyword tells JS to wait for response from api before returning / console.logging response
    const response = await axios.get('https://api.unsplash.com/search/photos', {
