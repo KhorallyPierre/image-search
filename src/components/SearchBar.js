@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './SearchBar.css'
 
 function SearchBar({onSubmit}) {
     const [term, setTerm] = useState('');
@@ -14,12 +15,13 @@ function SearchBar({onSubmit}) {
         setTerm(event.target.value)
     }
     return (
-    <div>
+    <div className="search-bar">
+        <h1 className="title"> Search an Image</h1>
         {/* submit events are automatically triggered with forms in the browser */}
         <form onSubmit={(handleFormSubmit)}>
-            Confirm your search: {term} <br/>
+           <label> Enter Search Term</label>
             <input value={term} onChange={handleChange}/>
-            {term < 3 &&'term must be longer'}
+           
         </form>
 
 
